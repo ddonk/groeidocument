@@ -1,0 +1,234 @@
+
+XC8Application3.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000180  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         000000a4  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      0000002f  00000000  00000000  00000180  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000028  00000000  00000000  000001af  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000b54  00000000  00000000  000001d7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 00000827  00000000  00000000  00000d2b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   000002d0  00000000  00000000  00001552  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000034  00000000  00000000  00001824  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    0000027d  00000000  00000000  00001858  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    000000f3  00000000  00000000  00001ad5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000018  00000000  00000000  00001bc8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .text         00000004  00000128  00000128  0000017c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001be0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .text.wait    0000001e  0000010a  0000010a  0000015e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .text.main    00000066  000000a4  000000a4  000000f8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+   8:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+   c:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  10:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  14:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  18:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  1c:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  20:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  24:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  28:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  2c:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  30:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  34:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  38:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  3c:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  40:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  44:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  48:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  4c:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  50:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  54:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  58:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  5c:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  60:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  64:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  68:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  6c:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  70:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  74:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  78:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  7c:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  80:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  84:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+  88:	0c 94 94 00 	jmp	0x128	; 0x128 <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	0e 94 52 00 	call	0xa4	; 0xa4 <_etext>
+  9c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <_exit>
+
+000000a0 <_exit>:
+  a0:	f8 94       	cli
+
+000000a2 <__stop_program>:
+  a2:	ff cf       	rjmp	.-2      	; 0xa2 <__stop_program>
+
+Disassembly of section .text:
+
+00000128 <__bad_interrupt>:
+ 128:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.wait:
+
+0000010a <wait>:
+#define F_CPU 8e6
+#include <avr/io.h>
+#include <util/delay.h>
+
+void wait( int ms ) {
+	for (int i=0; i<ms; i++) {
+ 10a:	20 e0       	ldi	r18, 0x00	; 0
+ 10c:	30 e0       	ldi	r19, 0x00	; 0
+ 10e:	08 c0       	rjmp	.+16     	; 0x120 <wait+0x16>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 110:	ef ec       	ldi	r30, 0xCF	; 207
+ 112:	f7 e0       	ldi	r31, 0x07	; 7
+ 114:	31 97       	sbiw	r30, 0x01	; 1
+ 116:	f1 f7       	brne	.-4      	; 0x114 <wait+0xa>
+ 118:	00 c0       	rjmp	.+0      	; 0x11a <wait+0x10>
+ 11a:	00 00       	nop
+ 11c:	2f 5f       	subi	r18, 0xFF	; 255
+ 11e:	3f 4f       	sbci	r19, 0xFF	; 255
+ 120:	28 17       	cp	r18, r24
+ 122:	39 07       	cpc	r19, r25
+ 124:	ac f3       	brlt	.-22     	; 0x110 <wait+0x6>
+		_delay_ms( 1 );		// library function (max 30 ms at 8MHz)
+	}
+}
+ 126:	08 95       	ret
+
+Disassembly of section .text.main:
+
+000000a4 <main>:
+
+int main(void) {
+
+	DDRD = 0b11111111;			// All pins PORTD are set to output
+  a4:	8f ef       	ldi	r24, 0xFF	; 255
+  a6:	81 bb       	out	0x11, r24	; 17
+	DDRC = 0b00000000;
+  a8:	14 ba       	out	0x14, r1	; 20
+	char result = 0b00000001;
+	int index = 0;
+	
+	int waitTime = 1000;
+  aa:	0f 2e       	mov	r0, r31
+  ac:	f8 ee       	ldi	r31, 0xE8	; 232
+  ae:	ef 2e       	mov	r14, r31
+  b0:	f3 e0       	ldi	r31, 0x03	; 3
+  b2:	ff 2e       	mov	r15, r31
+  b4:	f0 2d       	mov	r31, r0
+int main(void) {
+
+	DDRD = 0b11111111;			// All pins PORTD are set to output
+	DDRC = 0b00000000;
+	char result = 0b00000001;
+	int index = 0;
+  b6:	00 e0       	ldi	r16, 0x00	; 0
+  b8:	10 e0       	ldi	r17, 0x00	; 0
+
+int main(void) {
+
+	DDRD = 0b11111111;			// All pins PORTD are set to output
+	DDRC = 0b00000000;
+	char result = 0b00000001;
+  ba:	c1 e0       	ldi	r28, 0x01	; 1
+	int index = 0;
+	
+	int waitTime = 1000;
+	while (1) {
+		if(PINC == 0x01) {
+  bc:	83 b3       	in	r24, 0x13	; 19
+  be:	81 30       	cpi	r24, 0x01	; 1
+  c0:	b1 f4       	brne	.+44     	; 0xee <main+0x4a>
+			if(waitTime == 1000) {
+  c2:	88 ee       	ldi	r24, 0xE8	; 232
+  c4:	e8 16       	cp	r14, r24
+  c6:	83 e0       	ldi	r24, 0x03	; 3
+  c8:	f8 06       	cpc	r15, r24
+  ca:	39 f4       	brne	.+14     	; 0xda <main+0x36>
+				waitTime = 4000;
+  cc:	0f 2e       	mov	r0, r31
+  ce:	f0 ea       	ldi	r31, 0xA0	; 160
+  d0:	ef 2e       	mov	r14, r31
+  d2:	ff e0       	ldi	r31, 0x0F	; 15
+  d4:	ff 2e       	mov	r15, r31
+  d6:	f0 2d       	mov	r31, r0
+  d8:	06 c0       	rjmp	.+12     	; 0xe6 <main+0x42>
+			} else {
+				waitTime = 1000;
+  da:	0f 2e       	mov	r0, r31
+  dc:	f8 ee       	ldi	r31, 0xE8	; 232
+  de:	ef 2e       	mov	r14, r31
+  e0:	f3 e0       	ldi	r31, 0x03	; 3
+  e2:	ff 2e       	mov	r15, r31
+  e4:	f0 2d       	mov	r31, r0
+			}
+			
+			wait(200);
+  e6:	88 ec       	ldi	r24, 0xC8	; 200
+  e8:	90 e0       	ldi	r25, 0x00	; 0
+  ea:	0e 94 85 00 	call	0x10a	; 0x10a <wait>
+		}
+		PORTD = result;
+  ee:	c2 bb       	out	0x12, r28	; 18
+		result = result<<1;
+  f0:	cc 0f       	add	r28, r28
+		index++;
+  f2:	0f 5f       	subi	r16, 0xFF	; 255
+  f4:	1f 4f       	sbci	r17, 0xFF	; 255
+		
+		if(index >7) {
+  f6:	08 30       	cpi	r16, 0x08	; 8
+  f8:	11 05       	cpc	r17, r1
+  fa:	1c f0       	brlt	.+6      	; 0x102 <main+0x5e>
+			result = 0b00000001;
+			index = 0;
+  fc:	00 e0       	ldi	r16, 0x00	; 0
+  fe:	10 e0       	ldi	r17, 0x00	; 0
+		PORTD = result;
+		result = result<<1;
+		index++;
+		
+		if(index >7) {
+			result = 0b00000001;
+ 100:	c1 e0       	ldi	r28, 0x01	; 1
+			index = 0;
+		}
+		wait(waitTime);
+ 102:	c7 01       	movw	r24, r14
+ 104:	0e 94 85 00 	call	0x10a	; 0x10a <wait>
+
+	}
+ 108:	d9 cf       	rjmp	.-78     	; 0xbc <main+0x18>
